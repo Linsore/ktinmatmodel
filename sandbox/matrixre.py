@@ -1,5 +1,4 @@
 import numpy
-import array
 
 
 def benchmark(func):
@@ -18,7 +17,7 @@ def benchmark(func):
 @benchmark
 def mult(mode):
     if mode == 1:
-        for i in range(1000):
+        for i in range(100000):
             a = numpy.array([numpy.random.randint(10000, 100000), numpy.random.randint(10000, 100000)])
             b = numpy.array([[numpy.random.randint(10000, 100000),
                               numpy.random.randint(10000, 100000),
@@ -29,15 +28,5 @@ def mult(mode):
             c = numpy.dot(a, b)
     return c
 
-    # if mode == 'multiprocessing':
-    #  def f(xy, yx):
-    #    c = numpy.dot(xy, yx)
-    #     return c
-    # lock = Lock()
-    # p = Process(target=f, args=(lock, x, y))
-    # p.start()
-
 
 mult(1)
-
-# print(mult(a, b, 'sequential'))
