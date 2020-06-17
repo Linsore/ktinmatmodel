@@ -1,5 +1,5 @@
 import matrixre
-import matrix
+#import matrix
 import time
 import multiproccesmatrix
 
@@ -24,10 +24,10 @@ for i in range(10):
 
 print("Multiprocessing time = {}".format(summc/10))
 
-for i in range(10):
+"""for i in range(10):
     start = time.time()
     matrix.matrix_multiply()
     end = time.time()
     cy_time = end - start
     summb += cy_time
-print("Cython time = {}".format(summb/10))
+print("Cython time = {}".format(summb/10))"""
